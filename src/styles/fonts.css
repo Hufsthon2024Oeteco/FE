@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Pretendard Black';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'),url('oeteco/src/assets/font/Pretendard-Black.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard ExtraBold';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'),url('oeteco/src/assets/font/Pretendard-ExtraBold.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard Bold';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'),url('oeteco/src/assets/font/Pretendard-Bold.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard SemiBold';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'),url('oeteco/src/assets/font/Pretendard-SemiBold.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Medium'),url('oeteco/src/assets/font/Pretendard-Medium.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard Regular';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'),url('oeteco/src/assets/font/Pretendard-Regular.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard Light';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'),url('oeteco/src/assets/font/Pretendard-Light.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard ExtraLight';
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pretendard ExtraLight'),url('oeteco/src/assets/font/Pretendard-ExtraLight.woff2'),format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard Thin';
+    font-weight: 100;
+    font-display: swap;
+    src: local('Pretendard Thin'),url('oeteco/src/assets/font/Pretendard-Thin.woff2'),format('woff');
+}
