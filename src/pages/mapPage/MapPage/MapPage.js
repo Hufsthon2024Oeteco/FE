@@ -38,7 +38,7 @@ export default MapPage;
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: 99%;
   height: 100vh;
 `;
 
