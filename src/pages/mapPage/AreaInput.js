@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import themeGet from "../../utils/themeGet";
+import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 import CustomColumn from "../../components/CustomColumn";
 import CustomFont from "../../components/CustomFont";
 import BottomButton from "../../components/BottomButton";
 import { BsCaretDownFill } from "react-icons/bs";
-import { useState } from "react";
 
 function AreaInput() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -28,7 +29,9 @@ function AreaInput() {
           <option>읍·면·행정동</option>
         </StyledSelect>
       </SelectContainer>
-      <BottomButton>확인하기</BottomButton>
+      <Link to='/area/map'>
+        <BottomButton>확인하기</BottomButton>
+      </Link>
     </Wrapper>
   );
 }
