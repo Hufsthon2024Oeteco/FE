@@ -1,6 +1,6 @@
 import Main from "./pages/mainpage/Main";
 import AreaInput from "./pages/mapPage/AreaInput";
-import MapPage from "./pages/mapPage/MapPage";
+import MapPage from "./pages/mapPage/MapPage/MapPage";
 
 const routes = [
   {
