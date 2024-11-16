@@ -1,7 +1,7 @@
 import Main from "./pages/mainpage/Main";
 import AreaInput from "./pages/mapPage/AreaInput";
-import LoadingPage from "./pages/LoadingPage/LoadingPage";
 import MapPage from "./pages/mapPage/MapPage/MapPage";
+import MapTest from "./pages/mapPage/mapTest";
 
 const routes = [
   {
@@ -15,14 +15,14 @@ const routes = [
     name: "지역입력",
   },
   {
-    path: "/area/loading",
-    element: <LoadingPage />,
-    name: "로딩 중",
-  },
-  {
     path: "/area/map",
     element: <MapPage />,
     name: "지역입력",
+  },
+  {
+    path: "/test",
+    element: <MapTest />,
+    name: "test 페이지",
   },
 ];
 

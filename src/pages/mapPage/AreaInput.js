@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import themeGet from "../../utils/themeGet";
 import { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import CustomColumn from "../../components/CustomColumn";
 import CustomFont from "../../components/CustomFont";
@@ -67,7 +67,7 @@ function AreaInput() {
           </IconWrapper>
         </SelectWrapper>
       </SelectContainer>
-      <Link to='/area/map'>
+      <Link to="/area/map">
         <BottomButton>확인하기</BottomButton>
       </Link>
     </Wrapper>
