@@ -5,6 +5,7 @@ import { BsGeoAltFill, BsCaretDownFill } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import MapTest from "./mapTest";
 import categories from "../categories";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -31,6 +32,11 @@ const BackIcon = styled(IoIosArrowBack)`
     color: #06967b;
     transition: all 0.3s;
   }
+`;
+const Header = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 `;
 
 const Info = styled.div`
@@ -120,16 +126,18 @@ const DropDownIcon = styled(BsCaretDownFill)`
 
 const Button = styled.button`
   text-align: center;
-  width: 90%;
+
+  width: 329px;
   height: 50px;
+
   border-radius: 8px;
   border: none;
+
   color: ${themeGet("color.white")};
   background-color: ${themeGet("color.green")};
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
+
+  font-size: ${themeGet("font.sub_head.size")};
+  font-weight: ${themeGet("font.sub_head.weight")};
 
   &:hover {
     background-color: #06967b;
@@ -140,7 +148,12 @@ const Button = styled.button`
 function AreaLocation() {
   return (
     <Container>
-      <BackIcon />
+      <Header>
+        <Link to={"/"}>
+          <BackIcon />
+        </Link>
+      </Header>
+
       <Info>
         <Icon />
         <Text>
@@ -163,7 +176,9 @@ function AreaLocation() {
           <DropDownIcon />
         </IconWrapper>
       </Wrapper>
-      <Button>확인하기</Button>
+      <Link to={"/area/map"}>
+        <Button>확인하기</Button>
+      </Link>
     </Container>
   );
 }
