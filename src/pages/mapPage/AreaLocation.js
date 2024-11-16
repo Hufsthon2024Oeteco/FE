@@ -1,10 +1,10 @@
 import styled, { ThemeConsumer } from "styled-components";
 import themeGet from "../../utils/themeGet";
 import theme from "../../theme";
-
 import { BsGeoAltFill, BsCaretDownFill } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import MapTest from "./mapTest";
+import categories from "../categories";
 
 const Container = styled.div`
   width: 100%;
@@ -64,7 +64,8 @@ const Text = styled.p`
 const Wrapper = styled.div`
   position: relative;
   width: 90%;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-height: 400px;
 `;
 
 const MapWrapper = styled.div`
@@ -76,6 +77,8 @@ const MapWrapper = styled.div`
 
 const DropDown = styled.select`
   width: 100%;
+  max-height: px;
+  overflow-y: auto;
   padding: 18px 20px;
   font-size: 18px;
   font-weight: bold;
@@ -89,11 +92,17 @@ const DropDown = styled.select`
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
   &:focus {
     border-color: #00c985;
   }
 `;
+const OptionSelect = styled.option``;
 
 const IconWrapper = styled.div`
   position: absolute;
@@ -143,10 +152,12 @@ function AreaLocation() {
       </MapWrapper>
       <Wrapper>
         <DropDown>
-          <option value="">창업 분야를 선택해주세요</option>
-          <option value="1">분야 1</option>
-          <option value="2">분야 2</option>
-          <option value="3">분야 3</option>
+          <OptionSelect value="">창업 분야를 선택해주세요</OptionSelect>
+          {categories.map((category) => (
+            <OptionSelect key={category.code} value={category.code}>
+              {category.name}
+            </OptionSelect>
+          ))}
         </DropDown>
         <IconWrapper>
           <DropDownIcon />
