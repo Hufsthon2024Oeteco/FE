@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import themeGet from "../../utils/themeGet";
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import CustomColumn from "../../components/CustomColumn";
 import CustomFont from "../../components/CustomFont";
 import BottomButton from "../../components/BottomButton";
 import { BsCaretDownFill } from "react-icons/bs";
+
+// 나중에, 서버에서 정보를 받아오는 동안 LoadingPage를 띄우도록 수정해야함 !!
 
 function AreaInput() {
   const [selectedValues, setSelectedValues] = useState({
