@@ -51,7 +51,12 @@ function KakaoMap() {
 						level: 5, // 줌 레벨
 					};
 
-					new window.kakao.maps.Map(container, options);
+					const map = new window.kakao.maps.Map(container, options);
+
+					window.kakao.maps.event.addListener(map, "click", (mouseEvent) => {
+						const latLng = mouseEvent.latLng; // 클릭된 좌표
+						console.log(`클릭된 좌표: 위도(${latLng.getLat()}), 경도(${latLng.getLng()})`);
+					});
 				});
 			} catch (error) {
 				console.error("Kakao Maps 초기화 중 오류:", error);
