@@ -1,5 +1,6 @@
 import Main from "./pages/mainpage/Main";
 import AreaInput from "./pages/mapPage/AreaInput";
+import AreaLocation from "./pages/mapPage/AreaLocation";
 import MapPage from "./pages/mapPage/MapPage/MapPage";
 import MapTest from "./pages/mapPage/mapTest";
 
@@ -18,6 +19,11 @@ const routes = [
     path: "/area/map",
     element: <MapPage />,
     name: "지역입력",
+  },
+  {
+    path: "/arealocation",
+    element: <AreaLocation />,
+    name: "지역입력 마우스 클릭",
   },
   {
     path: "/test",

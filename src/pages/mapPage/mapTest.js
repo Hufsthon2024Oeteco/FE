@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 
 const MapContainer = styled.div`
   position: relative;
-  width: 100%;
-  height: 500px;
+  width: 390px;
+  height: 390px;
+  overflow: hidden; /* Ensures content stays within the box */
 `;
 
 const IconOverlay = styled.div`
@@ -38,7 +39,8 @@ function MapTest() {
 
   return (
     <MapContainer onClick={handleMapClick}>
-      <KakaoMap />
+      <KakaoMap style={{ width: "100%", height: "100%" }} />{" "}
+      {/* Ensure the map fills the container */}
       {iconPosition && (
         <IconOverlay top={iconPosition.top} left={iconPosition.left}>
           <div style={{ position: "relative" }}>
