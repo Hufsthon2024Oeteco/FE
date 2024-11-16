@@ -25,12 +25,6 @@ function Main() {
         <br />
       </Container>
 
-      <CustomButton $width='auto' $backgroundColor='green'>
-        <CustomFont $color='white'>이건 버튼</CustomFont>
-      </CustomButton>
-
-      <KakaoMap />
-
     </CustomColumn>
   );
 }

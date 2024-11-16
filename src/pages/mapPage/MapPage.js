@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import themeGet from "../../utils/themeGet";
-
 import CustomColumn from "../../components/CustomColumn";
+import CustomButton from "../../components/CustomButton";
 import CustomFont from "../../components/CustomFont";
+
+import KakaoMap from "../../components/kakaomap/KakaoMap";
 
 function MapPage() {
   return (
-    <CustomColumn
-      $width="100%"
-      $height="100vh"
-      $alignItems="center"
-      $justifyContent="center"
-    >
-      <CustomFont $color="black">여기는 mapPage</CustomFont>
+    <CustomColumn $width='100%' $height='100vh' $alignItems='center' $justifyContent='center'>
+      <KakaoMap />
     </CustomColumn>
   );
 }
