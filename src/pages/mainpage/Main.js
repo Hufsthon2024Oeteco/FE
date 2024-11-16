@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import themeGet from "../utils/themeGet";
+import themeGet from "../../utils/themeGet";
 
-import CustomColumn from "../components/CustomColumn";
-import CustomButton from "../components/CustomButton";
-import CustomFont from "../components/CustomFont";
+import CustomColumn from "../../components/CustomColumn";
+import CustomButton from "../../components/CustomButton";
+import CustomFont from "../../components/CustomFont";
 
 // components 폴더 내부 컴포넌트들은 아래 예시처럼 활용할 수 있어요.
 // 파일 열면 어떤 props를 넘길 수 있는지 알 수 있어욤
