@@ -1,57 +1,32 @@
-import { css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const globalStyles = css`
+const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
-  a, dl, dt, dd, ol, ul, li, form, label, table {
+  html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 10px;
-    vertical-align: baseline;
   }
 
-  body {
-    line-height: 1;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #FFFF;
-    margin-bottom: 100px;
+  /* 스크롤바 스타일 */
+  &::-webkit-scrollbar {
+    width: 12px;
   }
 
-  ol, ul {
-    list-style: none;
+  &::-webkit-scrollbar-thumb {
+    background-color: #AFAFAF;
+    border-radius: 1rem;
   }
 
-  button {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
+  &::-webkit-scrollbar-track {
+    background-color: #383838;
   }
-
-  html, body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-
-  /* Firefox */
-  html {
-    scrollbar-width: none;
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-  html::-webkit-scrollbar {
-    display: none;
-  }
+  
 `;
 
-export default globalStyles;
+export default GlobalStyles;
