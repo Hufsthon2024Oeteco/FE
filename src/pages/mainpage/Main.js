@@ -24,6 +24,7 @@ const Container = styled.div`
   height: 100%;
 
   color: ${themeGet("color.dark")};
+  
   background-color: ${themeGet("color.light_gray")};
 
   font-size: ${themeGet("font.h1.size")};
@@ -31,10 +32,33 @@ const Container = styled.div`
   img{
     width: 250px;
     height: 250px;
+
+    margin-top: 166px;
   }
 
   span{
     font-weight: 700;
+  }
+`;
+
+const Wrapper=styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Header=styled.p`
+  font-size: 48px;
+  color: ${themeGet('color.black')};
+  font-weight: 700;
+`;
+
+const Info=styled.div`
+  color: ${themeGet('color.black')};
+  font-size: 18px;
+  font-weight: 400;
+
+  span{
+    font-weight: 600;
   }
 `;
 
@@ -64,9 +88,11 @@ function Main() {
     <CustomColumn $width='100%' $height='100vh' $alignItems='center' $justifyContent='center'>
       <Container>
         <img src="./Logo.svg"  />
-        <h1>별자리</h1>
-        <p><span>스타</span>트업 <span>자리</span> 정보</p>
-        <Link to={'/area'}>
+        <Wrapper>
+          <Header>별자리</Header>
+          <Info><span>스타</span>트업 <span>자리</span> 정보</Info>
+        </Wrapper>
+        <Link to={'/arealocation'}>
           <StartButton>시작하기</StartButton>
         </Link>
       </Container>
