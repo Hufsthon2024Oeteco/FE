@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Copy .env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
       - name: Build the Vite app
         run: npm run build
 
@@ -47,4 +50,4 @@ jobs:
 
       - name: Rollout restart the deployment
         run: |
-          kubectl rollout restart -n lgtu deployments/oeteco-front
+          kubectl rollout restart -n oeteco deployments/oeteco-front
